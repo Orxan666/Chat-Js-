@@ -1,0 +1,77 @@
+#mini-chat {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+#mini-chat i {
+  padding: 20px;
+  background-color: firebrick;
+  color: white;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+#chat {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  max-width: 300px;
+  border: 1px solid firebrick;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#chat.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+}
+
+#chat header {
+  background-color: firebrick;
+  padding: 30px 20px;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#chat main {
+  overflow-y: scroll;
+  height: 300px;
+}
+
+#chat main .message {
+  margin: 15px;
+  padding: 15px;
+  width: 60%;
+  position: relative;
+  border-radius: 15px;
+}
+
+#chat main .message .time {
+  position: absolute;
+  top: 100%;
+  right: 15px;
+  color: grey;
+}
+
+#chat main .message.admin {
+  background-color: firebrick;
+  color: white;
+  float: left;
+}
+
+#chat main .message.user {
+  background-color: #5f3a3a;
+  color: white;
+  float: right;
+}
+/*# sourceMappingURL=style.css.map */

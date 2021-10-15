@@ -1,0 +1,66 @@
+#mini-chat {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    i {
+        padding: 20px;
+        background-color: firebrick;
+        color: white;
+        font-size: 25px;
+        border-radius: 50%;
+    }
+}
+#chat {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+    transform: translateY(30px);
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+
+        visibility: visible;
+    }
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    max-width: 300px;
+    border: 1px solid firebrick;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    header {
+        background-color: firebrick;
+        padding: 30px 20px;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    main {
+        overflow-y: scroll;
+        height: 300px;
+        .message {
+            margin: 15px;
+            padding: 15px;
+            width: 60%;
+            position: relative;
+            border-radius: 15px;
+            .time {
+                position: absolute;
+                top: 100%;
+                right: 15px;
+                color: grey;
+            }
+            &.admin {
+                background-color: firebrick;
+                color: white;
+                float: left;
+            }
+            &.user {
+                background-color: rgb(95, 58, 58);
+                color: white;
+                float: right;
+            }
+        }
+    }
+}
